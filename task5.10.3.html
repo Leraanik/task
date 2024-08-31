@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+    </body>
+    <script>
+        let name = prompt('Введите имя:');
+        let year = prompt('Введите год рождения:');
+        if(isNaN(year)){
+            alert('Год должен быть числом');
+        }
+        else{
+            alert(`${name}:${2024-year}`);
+        }
+    </script>
+</html>

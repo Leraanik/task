@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+    </body>
+    <script>
+        let name = prompt('Введите имя:');
+        let year = prompt('Введите год рождения:');
+        if(isNaN(year) || name.length == 0){
+            alert('Год не число или имя пустое');
+        }
+        else{
+            const remains = (2024 - year) % 10;
+            switch(remains){
+                case 1:
+                    alert(`${name}:${2024-year}год`);
+                    break;
+                case 2:
+                    alert(`${name}:${2024-year}года`);
+                    break;
+                case 3:
+                    alert(`${name}:${2024-year}года`);
+                    break;
+                case 4:
+                    alert(`${name}:${2024-year}года`);
+                    break;
+                default:
+                    alert(`${name}:${2024-year}лет`);
+                    break;
+            }
+            
+         }  
+    </script>
+</html>
