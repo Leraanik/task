@@ -1,0 +1,62 @@
+<!doctype html>
+    <html lang="ru">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Кредитный калькулятор</title>
+    </head>
+    
+    <body>
+        <ul>
+        <li>если клиенту нет 18 лет, то кредит он не получит</li>
+        <li>если клиенту от 18 до 21, то он может получить максимум 50000</li>
+        <li>если клиенту от 22 до 35, то он сможет получить максимум 400000</li>
+        <li>если клиенту от 36 до 65, то ему одобрят максимум 1000000</li>
+        <li>кредит могут выдавать суммами кратными 10000.</li>
+        </ul>
+    
+        <script>
+            let year = prompt('Введите ваш возраст');
+            if (year < 18){
+                alert('Вам меньше 18. В кредите отказано');
+            }
+            else if (year >= 18 && year <= 21){
+                alert('Мы можем выдать максимум 50000');
+                alert("Введите сумму кратную 1000")
+                let price = +prompt();
+                if (price % 1000 != 0){
+                    alert(`Вы ввели значение не кратное 1000. Мы можем выдать ${Math.floor(parseInt(price))}`);
+                }
+                else{
+                    alert(`Ващ кредит ${price}`);
+                }
+            }
+            else if (year >= 22 && year <= 35){
+                alert('Мы можем выдать максимум 400000');
+                alert("Введите сумму кратную 1000")
+                let price = +prompt();
+                if (price % 1000 != 0){
+                    alert(`Вы ввели значение не кратное 1000. Мы можем выдать ${Math.floor(parseInt(price))}`);
+                }
+                else{
+                    alert(`Ващ кредит ${price}`);
+                }
+            }
+            else if (year >= 36 && year <= 65){
+                alert('Мы можем выдать максимум 1000000');
+                alert("Введите сумму кратную 1000")
+                let price = +prompt();
+                if (price % 1000 != 0){
+                    alert(`Вы ввели значение не кратное 1000. Мы можем выдать ${Math.floor(parseInt(price))}`);
+                }
+                else{
+                    alert(`Ващ кредит ${price}`);
+                }
+            }
+        </script>
+    </body>
+    
+    </html>
